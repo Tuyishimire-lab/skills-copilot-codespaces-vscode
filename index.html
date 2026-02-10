@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive and interactive web application">
+    <title>Interactive Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">WebApp</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">Welcome to Our Interactive Web App</h1>
+                <p class="hero-subtitle fade-in">A responsive and modern web application built with simplicity in mind</p>
+                <button class="btn btn-primary fade-in">Get Started</button>
+            </div>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Works seamlessly on all devices - mobile, tablet, and desktop</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Performance</h3>
+                    <p>Optimized for speed with minimal dependencies</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern Design</h3>
+                    <p>Beautiful and clean interface with smooth animations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure</h3>
+                    <p>Built with security best practices in mind</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Easy to Host</h3>
+                    <p>Can be deployed to any static hosting platform</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Interactive</h3>
+                    <p>Engaging user experience with dynamic interactions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Interactive Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-color="#FF6B6B">
+                    <div class="gallery-content">
+                        <h3>Interactive Element 1</h3>
+                        <p>Hover or click to interact</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-color="#4ECDC4">
+                    <div class="gallery-content">
+                        <h3>Interactive Element 2</h3>
+                        <p>Hover or click to interact</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-color="#45B7D1">
+                    <div class="gallery-content">
+                        <h3>Interactive Element 3</h3>
+                        <p>Hover or click to interact</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-color="#96CEB4">
+                    <div class="gallery-content">
+                        <h3>Interactive Element 4</h3>
+                        <p>Hover or click to interact</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-color="#FFEAA7">
+                    <div class="gallery-content">
+                        <h3>Interactive Element 5</h3>
+                        <p>Hover or click to interact</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-color="#DFE6E9">
+                    <div class="gallery-content">
+                        <h3>Interactive Element 6</h3>
+                        <p>Hover or click to interact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <div id="formMessage" class="form-message"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Interactive Web App. Built with HTML, CSS & JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
