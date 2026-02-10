@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .heart-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            color: #d63447;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .yes-btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .yes-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+        }
+
+        .no-btn {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .no-btn:hover {
+            background: #d0d0d0;
+            transform: scale(0.95);
+        }
+
+        .romantic-message {
+            display: none;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        .journey-timeline {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .moment {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 15px;
+            border-left: 5px solid #d63447;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .moment-date {
+            font-weight: bold;
+            color: #d63447;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .moment-description {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .love-message {
+            font-size: 1.3em;
+            color: #d63447;
+            margin: 20px 0;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #f5576c;
+            position: absolute;
+            animation: confetti-fall 3s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="question-section">
+            <div class="heart-icon">❤️</div>
+            <h1>A Special Question...</h1>
+            <p class="question">Will you be my Valentine? 💕</p>
+            <div class="buttons">
+                <button class="yes-btn" onclick="showRomanticMessage()">Yes! 💖</button>
+                <button class="no-btn" onclick="handleNo()">Maybe...</button>
+            </div>
+        </div>
+
+        <div id="romantic-message" class="romantic-message">
+            <div class="heart-icon">💕</div>
+            <h1>You Made Me So Happy! 🥰</h1>
+            <p class="love-message">
+                Every moment with you is a treasure, and I can't wait to create more beautiful memories together. 
+                Here's our romantic journey so far...
+            </p>
+
+            <div class="journey-timeline">
+                <h2 style="color: #d63447; margin-bottom: 20px;">Our Special Moments 💖</h2>
+                
+                <div class="moment">
+                    <div class="moment-date">🌟 The First Meeting</div>
+                    <div class="moment-description">
+                        The day our eyes first met, and I knew something magical was about to begin. 
+                        Your smile lit up the entire room, and my heart has been yours ever since.
+                    </div>
+                </div>
+
+                <div class="moment">
+                    <div class="moment-date">☕ Our First Coffee Date</div>
+                    <div class="moment-description">
+                        We talked for hours, and time just disappeared. I discovered how amazing you are, 
+                        and how comfortable I felt being myself around you. That was the moment I started falling for you.
+                    </div>
+                </div>
+
+                <div class="moment">
+                    <div class="moment-date">🌙 Stargazing Night</div>
+                    <div class="moment-description">
+                        Under the stars, we shared our dreams and fears. You held my hand, and I felt like 
+                        I found my person. The universe aligned, and everything felt perfect.
+                    </div>
+                </div>
+
+                <div class="moment">
+                    <div class="moment-date">🎭 Our Inside Jokes</div>
+                    <div class="moment-description">
+                        All those silly moments that make us laugh uncontrollably. No one else understands 
+                        our humor quite like we do, and that makes us special.
+                    </div>
+                </div>
+
+                <div class="moment">
+                    <div class="moment-date">💝 Today and Forever</div>
+                    <div class="moment-description">
+                        Every day with you is a new adventure. I'm so grateful for you, and I can't wait 
+                        to continue writing our story together. Happy Valentine's Day, my love! 💕
+                    </div>
+                </div>
+            </div>
+
+            <p class="love-message" style="margin-top: 30px;">
+                You make every day feel like Valentine's Day! 💖✨
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function showRomanticMessage() {
+            const questionSection = document.getElementById('question-section');
+            const romanticMessage = document.getElementById('romantic-message');
+            
+            questionSection.style.display = 'none';
+            romanticMessage.style.display = 'block';
+            
+            // Add confetti effect
+            createConfetti();
+        }
+
+        function handleNo() {
+            const noBtn = document.querySelector('.no-btn');
+            const messages = [
+                "Are you sure? 🥺",
+                "Please? 💕",
+                "Pretty please? 🌹",
+                "Just give it a chance! 💖",
+                "I'll make it worth it! ✨"
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            noBtn.textContent = randomMessage;
+            
+            // Make the yes button bigger to encourage clicking it
+            const yesBtn = document.querySelector('.yes-btn');
+            const currentSize = parseFloat(window.getComputedStyle(yesBtn).fontSize);
+            yesBtn.style.fontSize = (currentSize * 1.1) + 'px';
+        }
+
+        function createConfetti() {
+            const colors = ['#f5576c', '#f093fb', '#ffeaa7', '#fdcb6e', '#ff6b6b', '#ee5a6f'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 3 + 's';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 3000);
+                }, i * 30);
+            }
+        }
+    </script>
+</body>
+</html>
